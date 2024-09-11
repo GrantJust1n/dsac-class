@@ -39,7 +39,7 @@ h1{
 
 .encrypt, .decrypt {
   margin: 10px;
-  padding-left: 50px; /* Adjust for better alignment */
+  padding-left: 50px;
   justify-content: center;
 }
 .encrypt input, .decrypt input{
