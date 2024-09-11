@@ -1,0 +1,72 @@
+body{
+  background-color: #edb1f1;
+  background-image: linear-gradient(to right,#edb1f1,  #8ef6e4 );
+}
+h1{
+  margin: 2px;
+  padding: 4px;
+  font-size: 16px;
+
+}
+.title {
+  text-align: center;
+  display: inline-flex;
+  font-size: small;
+  border: solid;
+  border-width: 1px ;
+  border-radius: 20px;
+  border-color: #d59bf6;
+  padding: 0px;
+  margin-top: 20px;
+  background-color: #d59bf6;
+  background-image: linear-gradient(to right, #d59bf6,#9896f1);
+}
+.container{
+  text-align: center;
+}
+
+.whole {
+  border: solid;
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #9896f1;
+  border-color: #d59bf6;
+  background-image: linear-gradient(to right,#9896f1, fuchsia);
+}
+
+.encrypt, .decrypt {
+  margin: 10px;
+  padding-left: 50px; /* Adjust for better alignment */
+  justify-content: center;
+}
+.encrypt input, .decrypt input{
+width: 300px;
+border: 3px solid aquamarine;
+border-radius: 10px;
+}
+
+.buttons {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.buttonEncrypt, .buttonDecrypt {
+  border: solid 2px aquamarine;
+  background-color: rgb(56, 163, 201);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.en{
+  padding-left: 60px;
+}
+.de{
+  padding-left: 60px;
+}

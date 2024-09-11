@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Encrypt.css">
+  <title>Encryption and Decryption Project</title>
+</head>
+<body>
+<div class="background">
+
+
+<div class="container">
+  <div class="title" id="title">
+    <h1>Simple Encryption and Decryption Project</h1>
+</div>
+  </div>
+  <br>
+  <div class="whole" id="whole">
+  <div>
+    <p class="encrypt" id="encrypt">
+      Enter text to encrypt: 
+      <input type="text" name="text" id="text">
+    </p>
+    <p class="decrypt" id="decrypt">
+      Enter shift value (number):
+      <input type="number" name="number" id="number">
+    </p>
+  </div>
+  <div class="buttons" id="buttons">
+    <button onclick="encrypt()" class="buttonEncrypt">Encrypt</button>
+    <button onclick="decrypt()" class="buttonDecrypt">Decrypt</button>
+  </div>
+  <div class="answer" id="answer">
+    <p class="en" id="encryptedMessage">Encrypted Message:</p>
+    <p class="de" id="decryptedMessage">Decrypted Message:</p>
+  </div>
+
+  </div>
+</div>
+
+  <script>
+    function encrypt() {
+      let text = document.getElementById("text").value;
+      let shift = parseInt(document.getElementById("number").value);
+      let encryptedText = shiftValue(text, shift);
+      document.getElementById("encryptedMessage").innerText = "Encrypted Message: " + encryptedText;
+    }
+
+    function decrypt() {
+      let decryptedText = document.getElementById("text").value; 
+      document.getElementById("decryptedMessage").innerText = "Decrypted Message: " + decryptedText ;
+    }
+
+  
+    function shiftValue(text, shift) {
+      let result = '';
+      for (let i = 0; i < text.length; i++) {
+        let charCode = text.charCodeAt(i);
+
+        if (charCode >= 65 && charCode <= 90) {
+          result += String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+        }
+        else if (charCode >= 97 && charCode <= 122) {
+          result += String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+        }
+     else{
+          result += text.charAt(i);
+        }
+      }
+      return result;
+    }
+  </script>
+
+</body>
+</html>
